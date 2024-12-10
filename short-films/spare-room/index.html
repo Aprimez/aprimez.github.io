@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 400px;
+    }
+
+    .house-img {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+    .swiper-pagination-bullet {
+        background-color: white;
+        opacity: 1;
+
+    }
+    .swiper-pagination {
+        padding: 10px;
+        background-color:rgba(0,0,0,.5);
+        position: absolute;
+        bottom: 0 !important;
+    }
+    .swiper-pagination-bullet-active {
+        transform: scale(1.5);
+    }
+    .swiper-slide:nth-child(1) {
+        background-image: url("img/slide0.jpg");
+        background-position: -10px;
+    }
+
+    .swiper-slide:nth-child(2) {
+        background-image: url("img/slide1.jpg");
+        background-position: -10px;
+    }
+
+    .swiper-slide:nth-child(3) {
+        background-image: url("img/slide2.jpg");
+    }
+
+    .swiper-slide:nth-child(4) {
+        background-image: url("img/slide3.jpg");
+        background-position: right;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .post {
+        width: 100%;
+        background-color: white;
+        margin: 5px 0;
+        padding-bottom: 10px;
+    }
+    .post:after {
+        content: "";
+        bottom: 50px;
+        right: 100px;
+        background-image: url("../spare-room/img/save.jpg");
+        background-size: contain;
+    }
+    .post p {
+        margin: 5px 20px;
+    }
+    .post p.date {
+        color: grey;
+    }
+    .user {
+        display: flex;
+        padding: 10px;
+    }
+    .dp {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: grey;
+        overflow: hidden;
+        background-size: cover;
+    }
+    .name {
+        justify-content: center;
+        align-content: center;
+        font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="post">
+        <div class="user">
+            <div class="dp" style="background-image: url(img/cian.jpg)"></div>
+            <p class="name">Cian Jones</p>
+        </div>
+        <div class="house-img" style="background-image: url(img/house-1.jpg)">
+        </div>
+        <p>asdasdasd</p>
+        <p class="date">three weeks ago</p>
+    </div>
+    <div class="post">
+        <div class="user">
+            <div class="dp"></div>
+            <p class="name">Private landlord</p>
+        </div>
+        <!-- Swiper JS -->
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <p>asdasdasd</p>
+        <p class="date">three weeks ago</p>
+    </div>
+    <div class="post">
+        <div class="user">
+            <div class="dp" style="background-image: url(img/grill.jpg)"></div>
+            <p class="name">Nicole</p>
+        </div>
+        <div class="house-img" style="background-image: url(img/house-3.jpg)"></div>
+        <p>asdasdasd</p>
+        <p class="date">three weeks ago</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>
